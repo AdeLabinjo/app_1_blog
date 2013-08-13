@@ -1,0 +1,19 @@
+<h2 style="font-family: Autour one"> Your Posts | <%= link_to 'New Post', new_post_path, :class => "btn btn-success" %> </h2>
+  <% @posts.each do |post| %>
+
+<br />
+
+<div class="well" style="background-color:blue">
+  <h3 style="color: white">  Post: <%= post.id %> </h3>
+  <h4 style="color: white">  <%= post.title %> </h4>
+  <h4 style="color: white">  By: <%= post.text %> </h4>
+</div>
+ 
+<p> <%= link_to 'Show', post_path(post), :class => 'btn btn-primary'  %> <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-info' %> </p>
+<hr/>
+<% end %>
+
+
+
+
+
